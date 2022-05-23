@@ -1,0 +1,52 @@
+.calculatorStyle {
+  width: 300px;
+  height: 500px;
+  margin: auto;
+  border-radius: 1em;
+  padding: 20px;
+  background-color: black;
+  box-shadow: 2px 2px 2px 2px blue;
+  position: relative;
+}
+
+#btn {
+  width: 60px;
+  height: 50px;
+  border: 1px solid blue;
+  border-radius: 0.4em;
+  background-color: goldenrod;
+}
+#btn:hover {
+  box-shadow: 3px 3px blue;
+  background-color: brown;
+}
+#basic-addon2 {
+  background-color: goldenrod;
+}
+#basic-addon2:hover {
+  box-shadow: 3px 3px blue;
+  background-color: brown;
+}
+#output {
+  background-color: goldenrod;
+}
+.history {
+  width: 3px;
+  background-color: wheat;
+  height: 70px;
+  border: 1px solid white;
+  flex-direction: column;
+  position: absolute;
+  right: 7px;
+  border-radius: 0.3em;
+}
+#historyValueDisplay {
+  color: wheat;
+  /* width: auto; */
+  height: 100px;
+  overflow: hidden;
+}
+ul li {
+  cursor: pointer;
+  color: blue;
+}

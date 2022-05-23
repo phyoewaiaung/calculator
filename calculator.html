@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="calclator.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="calculatorStyle mt-5">
+      <div>
+        <ul id="historyValueDisplay" for=""></ul>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="output"
+          class="form-control"
+          value=""
+          aria-describedby="basic-addon2"
+        />
+        <div class="input-group-append">
+          <span class="input-group-text" id="basic-addon2">X</span>
+        </div>
+      </div>
+      <div onclick="showHistory()" class="history"></div>
+      <br />
+      <input onclick="one()" id="btn" type="button" value="1" />
+      <input onclick="two()" id="btn" type="button" value="2" />
+      <input onclick="three()" id="btn" type="button" value="3" />
+      <input onclick="divide()" id="btn" type="button" value="%" />
+      <br />
+      <br />
+      <input onclick="four()" id="btn" type="button" value="4" />
+      <input onclick="five()" id="btn" type="button" value="5" />
+      <input onclick="six()" id="btn" type="button" value="6" />
+      <input onclick="multiply()" id="btn" type="button" value="x" />
+      <br />
+      <br />
+
+      <input onclick="seven()" id="btn" type="button" value="7" />
+      <input onclick="eight()" id="btn" type="button" value="8" />
+      <input onclick="nine()" id="btn" type="button" value="9" />
+      <input onclick="minus()" id="btn" type="button" value="-" />
+      <br />
+      <br />
+      <input onclick="doubleZero()" id="btn" type="button" value="00" />
+      <input onclick="zero()" id="btn" type="button" value="0" />
+      <input onclick="plus()" id="btn" type="button" value="+" />
+      <input onclick="equal()" id="btn" type="button" value="=" />
+    </div>
+    <div id="total" value=""></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/caab8952d4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="calculator.js"></script>
+  </body>
+</html>
