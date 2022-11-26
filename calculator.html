@@ -14,12 +14,13 @@
     />
   </head>
   <body>
-    <div class="calculatorStyle mt-5">
-      <div>
-        <ul id="historyValueDisplay" for=""></ul>
+    <div class="calculatorStyle">
+      <span class="history-clear cursor-style" id="his-clear">clear</span>
+      <div class="history-bg">
+        <ul id="history"></ul>
       </div>
 
-      <div class="input-group">
+      <div class="input-group container">
         <input
           type="text"
           id="output"
@@ -28,10 +29,10 @@
           aria-describedby="basic-addon2"
         />
         <div class="input-group-append">
-          <span class="input-group-text" id="basic-addon2">X</span>
+          <span class="input-group-text cursor-style" id="basic-addon2">X</span>
         </div>
       </div>
-      <div onclick="showHistory()" class="history"></div>
+      <!-- <div onclick="showHistory()" class="history"></div> -->
       <br />
       <input onclick="one()" id="btn" type="button" value="1" />
       <input onclick="two()" id="btn" type="button" value="2" />
@@ -58,6 +59,8 @@
       <input onclick="equal()" id="btn" type="button" value="=" />
     </div>
     <div id="total" value=""></div>
+
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
