@@ -1,10 +1,13 @@
 var screenOutput = document.getElementById("output");
 var btnClear = document.getElementById("basic-addon2");
+let history = document.querySelector("#history");
+let hsClear = document.querySelector("#his-clear");
 
 var num1 = "";
 var num2 = "";
 var total = 0;
 var opr = "";
+
 function one() {
   screenOutput.value += "1";
 }
@@ -71,47 +74,18 @@ function plus() {
     screenOutput.value += "+";
   }
 }
-var liText = "";
+
 function equal() {
   screenOutput.value += "=" + eval(screenOutput.value);
-  liText +=
-    "<li onclick=\"reShow('" +
-    screenOutput.value +
-    "')\" value='1'>" +
-    screenOutput.value +
-    " </li>";
-  console.log(liText);
+  let li = document.createElement("li");
+  li.innerText = screenOutput.value;
+  history.append(li);
+}
 
-  // document.getElementById("historyValueDisplay").innerHTML = liText;
-  // if (
-  //   document.getElementById("historyValueDisplay").getElementsByTagName("li")
-  //     .length == 4
-  // ) {
-  //   document.getElementById("historyValueDisplay").innerHTML +=
-  //     "<li>See More History</li>";
-  // }
-}
-function showHistory() {
-  console.log("hello");
-  document.getElementById("historyValueDisplay").innerHTML = liText;
-}
-function clear() {
-  screenOutput.value = "";
-}
-btnClear.addEventListener("click", clear);
-function reShow(text) {
-  console.log("click : " + text);
-  // var string = Array.from(text);
-  // for (var i = 0; i < string.length; i++) {
-  //   if (string[i] == "=") {
-  //     console.log(string.indexOf("="));
-  //     var equalIndex = string.indexOf("=");
-  //   }
-  //   screenOutput.value = string[equalIndex + 1];
-  //   screenOutput.value += string[i];
-  // }
-  // screenOutput.value = text;
-  var eIndex = text.indexOf("=");
-  console.log(eIndex);
-  screenOutput.value = text.slice(eIndex + 1);
-}
+btnClear.addEventListener("click", ()=> {
+  screenOutput.value = ""
+});
+
+hsClear.addEventListener("click", () => {
+  history.innerText = "";
+})
